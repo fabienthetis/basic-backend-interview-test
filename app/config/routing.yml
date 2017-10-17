@@ -1,0 +1,45 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+
+
+neo_store_data:
+    path:      /neo/store_data
+    defaults:  { _controller: AppBundle:Store:storeData }
+
+
+neo_hazardous:
+    path:      /neo/hazardous
+    defaults:  { _controller: AppBundle:Default:neoHazardous }
+
+
+
+neo_fastest_hazardous:
+    path:      /neo/fastest
+    defaults:  { _controller: AppBundle:Default:neoFastest }
+
+
+neo_best_year:
+    path:      /neo/best-year
+    defaults:  { _controller: AppBundle:Default:neoBestYear }
+
+
+neo_best_month:
+    path:      /neo/best-month
+    defaults:  { _controller: AppBundle:Default:neoBestMonth }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
