@@ -12,7 +12,8 @@ In this example we choose a Mysql Database.
 
 You need to create a database with the name  "mcmakler_data"
 
-You need to import the file present at the racine of the project and with the name mcmakler_data_2017-10-17.sql
+You need to import the file present in the folder /dump_mysql/
+with the name mcmakler_data_2017-10-17.sql
 
 The table neo will have the follwing structure: 
 
@@ -150,8 +151,12 @@ example of response:
 The response contains the best_month, the number of neo for this month and the string of this month
 
 
+Postman file
+======
 
+To check the correct cal of the api , i used postman to do call test.
 
+The collection created is available in the folder /postman/
 
 
 Test with phpunit
