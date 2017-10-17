@@ -1,0 +1,168 @@
+{
+	"variables": [],
+	"info": {
+		"name": "api-nasa-test",
+		"_postman_id": "f881d99d-4e37-a1bc-7ecb-8e9508498116",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "fastest",
+			"request": {
+				"url": {
+					"raw": "http://127.0.0.1:8000/neo/fastest?hazardous=false",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"neo",
+						"fastest"
+					],
+					"query": [
+						{
+							"key": "hazardous",
+							"value": "false\n",
+							"equals": true
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "store data in db",
+			"request": {
+				"url": {
+					"raw": "http://127.0.0.1:8000/neo/store_data?reference_date=2016-10-10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"neo",
+						"store_data"
+					],
+					"query": [
+						{
+							"key": "reference_date",
+							"value": "2016-10-10",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "best-year",
+			"request": {
+				"url": {
+					"raw": "http://127.0.0.1:8000/neo/best-year?hazardous=false",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"neo",
+						"best-year"
+					],
+					"query": [
+						{
+							"key": "hazardous",
+							"value": "false\n",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "best-month",
+			"request": {
+				"url": {
+					"raw": "http://127.0.0.1:8000/neo/best-month?hazardous=false",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"neo",
+						"best-month"
+					],
+					"query": [
+						{
+							"key": "hazardous",
+							"value": "false\n",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "default route",
+			"request": {
+				"url": "http://127.0.0.1:8000/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list item from db",
+			"request": {
+				"url": "http://127.0.0.1:8000/neo/hazardous",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
