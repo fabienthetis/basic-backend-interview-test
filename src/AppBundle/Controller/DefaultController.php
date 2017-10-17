@@ -23,7 +23,7 @@ class DefaultController extends Controller
 
 
     // function to return all data with potentially harzardous asteroids
-    public function neoHazardousAction ()
+    public function neoHazardousAction()
     {
         $conn = $this->getDoctrine()->getConnection();
         $stmt = $conn->prepare('select * from neo where is_hazardous = 1; ');
@@ -40,11 +40,10 @@ class DefaultController extends Controller
     {
         $hazardous = $request->query->get('hazardous');
 
-        if (isset($hazardous) && $hazardous == 'true'){
+        if (isset($hazardous) && $hazardous == 'true') {
 
             $valueHazardous = 1;
-        }
-        else{
+        } else {
             $valueHazardous = 0;
         }
 
@@ -71,60 +70,48 @@ class DefaultController extends Controller
     }
 
 
-    public function neoBestYearAction(Request $request){
-
+    public function neoBestYearAction(Request $request)
+    {
 
         $hazardous = $request->query->get('hazardous');
 
-        if (isset($hazardous) && $hazardous == 'true'){
+        if (isset($hazardous) && $hazardous == 'true') {
 
             $valueHazardous = 1;
-        }
-        else{
+        } else {
             $valueHazardous = 0;
         }
 
         $data = $this->queryBestYear($valueHazardous);
 
-        //dump($data);
+        if (isset($data[0])) {
 
-        if (isset($data[0])){
-
-            $response = new JsonResponse($data);
+            $response = new JsonResponse($data[0]);
             return $response;
-        }
-        else
-        {
+        } else {
             return $this->errorGeneral();
 
         }
-
     }
 
-    public function neoBestMonthAction(Request $request){
-
-
+    public function neoBestMonthAction(Request $request)
+    {
         $hazardous = $request->query->get('hazardous');
 
-        if (isset($hazardous) && $hazardous == 'true'){
+        if (isset($hazardous) && $hazardous == 'true') {
 
             $valueHazardous = 1;
-        }
-        else{
+        } else {
             $valueHazardous = 0;
         }
 
         $data = $this->queryBestMonth($valueHazardous);
 
-        //dump($data);
+        if (isset($data[0])) {
 
-        if (isset($data[0])){
-
-            $response = new JsonResponse($data);
+            $response = new JsonResponse($data[0]);
             return $response;
-        }
-        else
-        {
+        } else {
             return $this->errorGeneral();
 
         }
@@ -132,8 +119,8 @@ class DefaultController extends Controller
     }
 
 
-
-    private function queryBestYear($valueHazardous){
+    private function queryBestYear($valueHazardous)
+    {
 
         $query = "SELECT COUNT(id) as count_neo, YEAR(neo.date_value) as best_year
         FROM neo where is_hazardous = :is_hazardous
@@ -151,7 +138,8 @@ class DefaultController extends Controller
     }
 
 
-    private function queryBestMonth($valueHazardous){
+    private function queryBestMonth($valueHazardous)
+    {
 
         $query = "SELECT COUNT(id) as count_neo, MONTH(neo.date_value) as best_month ,  MONTHNAME(STR_TO_DATE(MONTH(neo.date_value), '%m'))    as name_month
         FROM neo where is_hazardous = :is_hazardous
@@ -177,5 +165,4 @@ class DefaultController extends Controller
         return $response;
     }
 
-    
 }
