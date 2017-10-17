@@ -605,7 +605,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>rZYELjag0FObh+GYcpEJzK</argument>
+      <argument>KBcB5il6FGyrC8nNvfIwpb</argument>
       <argument>/Users/fabienthetis/GIT_TEST/basic-backend-interview-test/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -615,7 +615,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>rZYELjag0FObh+GYcpEJzK</argument>
+      <argument>KBcB5il6FGyrC8nNvfIwpb</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -1372,14 +1372,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -2165,12 +2157,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>59e635cd3ab9c1.14404344</argument>
+      <argument>59e6482e8f6dd5.86704681</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>59e635cd3ab9c1.14404344</argument>
+      <argument>59e6482e8f6dd5.86704681</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3361,7 +3353,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>zdtLdFEIbN</argument>
       <argument>0</argument>
-      <argument>rZYELjag0FObh+GYcpEJzK</argument>
+      <argument>KBcB5il6FGyrC8nNvfIwpb</argument>
       <argument>/Users/fabienthetis/GIT_TEST/basic-backend-interview-test/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3369,7 +3361,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>ZQJnZB31jD</argument>
       <argument>0</argument>
-      <argument>rZYELjag0FObh+GYcpEJzK</argument>
+      <argument>KBcB5il6FGyrC8nNvfIwpb</argument>
       <argument>/Users/fabienthetis/GIT_TEST/basic-backend-interview-test/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3377,7 +3369,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>LXEx7nd0sa</argument>
       <argument>0</argument>
-      <argument>rZYELjag0FObh+GYcpEJzK</argument>
+      <argument>KBcB5il6FGyrC8nNvfIwpb</argument>
       <argument>/Users/fabienthetis/GIT_TEST/basic-backend-interview-test/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3385,7 +3377,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>esAxc5BHcy</argument>
       <argument>0</argument>
-      <argument>rZYELjag0FObh+GYcpEJzK</argument>
+      <argument>KBcB5il6FGyrC8nNvfIwpb</argument>
       <argument>/Users/fabienthetis/GIT_TEST/basic-backend-interview-test/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
